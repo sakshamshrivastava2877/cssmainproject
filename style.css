@@ -1,0 +1,277 @@
+/*------------------------------------------------------------ root styling-------------------------------------------------------------------- */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+
+}
+:root{
+    --bg-color: black;
+    --text-color: white;
+    --main-color: rgb(191, 0, 255);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;  /*THIS WILL HELP TO PRECENT HORIZONTAL SCROLLING AS IT WILL CLIPPED THE CONTENT THAT EXTENDS BEYOND THE WIDTH. */
+}
+
+.header .logo{
+    color:var(--main-color)/*COLOUR I GAVE HERE IS ALREADY ON ROOT ELEMENT */
+}
+
+
+body{
+    background: var(--bg-color);
+    color:var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem;
+}
+
+/* ----------------------------------------------------------------intro styling--------------------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+    .header{
+        padding: 1.5rem;
+    }
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem ;
+    width: 100%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;/*THIS WILL SET THE Z-INDEX OF HEADER ELEMENT THAT WILL HELP IN POSITION */
+}
+
+.logo{
+    font-size: 2.5rem;/*THIS WILL SET THE FONT SIZE*/
+    color: var(--text-color);
+    font-weight: 600;/*THIS WILL HELP IN FONT WEIGHT TO BOLD FONT WEIGHT.*/
+}
+
+/* THIS WILL SET THE FONTSIZE, COLOUR FOR THE LINKS IN THE NAVBAR */
+.navbar a{
+    font-size: 1.5rem;/*THIS WILL GIVE SIZE TO 1.5 TIMES TO DEFAULT*/
+    color: var(--text-color);
+    margin-left: 3rem;
+    transition: .3s;
+}
+
+/* THIS WILL CHANGE THE COLOUR OF THE LINKS WHEN HOVERED */
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+}
+
+/* THIS WILL TARGET THE ID IN LIST_MENU */
+#list_menu{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;/* TIS WILL HIDE THE DISPLAY */
+}
+
+/* THIS WILL TARGET THE ELEMENT CLASS OF HOME */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* THIS WILL CHANGE THE FONT OF H3 */
+.intro h3{
+    font-size: 4rem;
+    font-weight: 600;
+}
+/* THIS WILL CHANGE THE FONT OF H1 */
+.intro h1{
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+/* THIS WILL CHANGE THE FONT OF P */
+.intro p{
+    font-size: 1.6rem;
+}
+
+/*-------------------------------------------------------- social styling------------------------------------------------------------- */
+
+/* THIS WILL TARGET THE LOGO OF THE SOCIAL MEDIA  */
+.social-info a{
+    display: inline-flex;
+    width: 4rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    border: .3rem solid var(--main-color);
+    background: transparent; /*THIS WILL ROUND THE CORNERS OF THE ANCHOR TAGS */
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin: 1.5rem;
+    transition: .3s ease;/*THIS WILL ADD THE TRANSITION EFFECT TO THE ANCHOR TAGS*/
+}
+
+/* THIS WILL TARGET HYPERLINKS WHEN THE USER HOVERED */
+.social-info a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 1rem var(--main-color);/*THIS WILL ADD THE BLUR RADIUS AND SAME COLOR TO BACKGROUND*/
+}
+
+/* ----------------------------------------------------------about styling -----------------------------------------------------------------*/
+
+/* THIS WILL SET THE COLOUR */
+span{
+    color: rgb(191, 0, 255);
+}
+
+/* THIS WILL TARGET THE IMAGE  */
+.my-img img{
+    width: 250px;
+    height: 280px;
+    position: relative;
+    top: -10px; /*THIS WILL SET THE POSITION OF THE IMAGE*/
+    left: 500px;
+    border-radius: 50%;
+    border: .2rem solid var(--bg-color);/*THIS WILL SET THE THICKNESS AND COLOUR*/
+    border-radius: 50px 50px 50px 50px; /*THIS WILL GIVE THE BORDER TO EVERY CORNER OF THE IMAGE*/     
+}
+
+/* THIS WILL SET THE DESIGN TO MY BTN */
+.btn{
+    color: rgb(191, 0, 255);
+    border-radius: 3rem;
+    box-shadow: 0 0 1rem;
+    width: 7.5rem;
+    padding: 1rem;
+    display: inline-block;
+    background: .3rem solid var(--main-color);/*THIS WILL SET THE BACKGROUNG OF THE BUTTON*/
+    text-align: center;
+    margin-top: 2rem;
+}
+/* THIS WILL GIVE COLOUR TO MY ABOUT CLASS */
+.About{
+    background: var(--second-bg-color);
+}
+/* THIS WILL GIVE COLOUR TO MY H3 IN ABOUT CLASS */
+.About h3{
+    font-size: 35px;
+    line-height: 50px;
+}
+
+/* THIS WILL GIVE COLOUR TO MY P IN ABOUT CLASS */
+.About p{
+    line-height: 1.5;
+    font-size: 15px;
+    letter-spacing: 1px;
+    
+}
+
+/* THIS WILL GIVE COLOUR TO MY ABOUT CLASS */
+.heading{
+    font-size: 3.5rem;
+}
+
+/* --------------------------------------------------------------project styling-------------------------------------------------------------- */
+
+/* THIS WILL GIVE MARGIN TO H2 IN PROJECT CLASS */
+.Project h2{
+    margin-bottom: 4rem;
+}
+
+/* THIS WILL TRGET TO CONTAINER IN PROJECT CLASS */
+.Project-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem; /*THIS WILL GIVE GAP TO THE PROJECT-CONTAINER*/
+}
+
+/* THIS WILL GIVE FONT-SIZE TO H3 IN PROJECT AND PROJECT-CONTAINER CLASS */
+.Project-container .projects-box  h3{
+    font-size: 2.5rem;
+}
+
+/* THIS WILL TARGET TO PROJECT AND PROJECT-CONTAINER CLASS WHEN THE USER HOVERED */
+.Project-container .projects-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.0);
+}
+
+/* THIS WILL TARGET TO H3 IN PROJECT-BOX AND PROJECT-CONTAINER CLASS */
+.Project-container .projects-box{
+    flex: 1 1 30rem;/*THIS WILL SETS THE FLEX-GROW, SHRINK,AND BASIS. THAT WILL SPECIFIES THAT ELEMENT SHOULD GROW AND SHRINK EQUALLY*/
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;/*IN THIS FIRST VALUE IS FOR TOP AND BOTTOM, SECOND IS FOR LEFT AND RIGHT, AND THIRD IS FOR THE BOTTOM PADDING*/
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .3s ease;
+}
+
+/* THIS WILL TARGET THE PROJECT-BOX I */
+.projects-box i{
+    font-size: 4.5rem;
+    color:var(--main-color)
+}
+
+/* THIS WILL GIVE GRID TO THE Project-container.projects-box */
+.Project-container.projects-box{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    gap: 5.5rem;
+}
+
+/*---------------------------------------------------------- contact Info -----------------------------------------------------------------------*/
+
+/* TIS WILL TARGET MY FORM IN CONTACT CLASS */
+.contact form{
+    max-width: 90rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-left: 10px;
+   
+}
+.text-area{
+    padding-top: 15px;
+}
+.text-area input{
+    border-radius: 10px;
+    border: 2px solid black;
+    background: var(--bg-color);
+    width: 300px;
+    height: 50px;
+}
+.text-area input:hover{
+    border: 2px solid purple;
+}
+.contact form .btn{
+    width: 300px;
+
+}
+
+@media only screen and (max-width: 568px) {
+    section{
+        padding: 5rem 2rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .header{
+        padding: 1.5rem;
+    }
+}
